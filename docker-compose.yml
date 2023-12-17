@@ -1,0 +1,12 @@
+version: "3"
+services:
+  np-electoral-roll:
+    container_name: npElectoralRoll
+    build:
+      context: .
+    ports:
+      - 8080:8080
+      - 5005:5005
+    environment:
+      - JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005
+      - PARALLELISM=50

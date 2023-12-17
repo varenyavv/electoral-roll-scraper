@@ -1,0 +1,11 @@
+logging:
+  level:
+    root: INFO
+springdoc:
+  swagger-ui:
+    tagsSorter: alpha
+server:
+  servlet:
+    contextPath: /api
+    session:
+      timeout: 1800000
